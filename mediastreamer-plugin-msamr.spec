@@ -6,7 +6,7 @@ Summary:	AMR audio codec for mediastreamer
 Summary(pl.UTF-8):	Kodek dźwięku AMR dla mediastreamera
 Name:		mediastreamer-plugin-msamr
 Version:	0.0.2
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://download-mirror.savannah.gnu.org/releases/linphone/plugins/sources/msamr-%{version}.tar.gz
