@@ -5,13 +5,16 @@
 Summary:	AMR audio codec for mediastreamer
 Summary(pl.UTF-8):	Kodek dźwięku AMR dla mediastreamera
 Name:		mediastreamer-plugin-msamr
-Version:	1.0.2
-Release:	7
+Version:	1.1.3
+Release:	1
 License:	GPL v2+
 Group:		Libraries
 Source0:	http://linphone.org/releases/sources/plugins/msamr/msamr-%{version}.tar.gz
-# Source0-md5:	b5a64fa7c93e539ed230218b9d1cd41a
+# Source0-md5:	10c6a05e12c2af17f4ebc215d6c477da
 URL:		https://github.com/Distrotech/msamr
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool
 BuildRequires:	ortp-devel >= 0.16.0
 BuildRequires:	mediastreamer-devel >= 2.0.0
 BuildRequires:	opencore-amr-devel >= 0.1.2
@@ -33,6 +36,11 @@ Ten pakiet udostępnia wtyczkę mediastreamera do kodeka dźwięku AMR.
 %setup -q -n msamr-%{version}
 
 %build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure \
 	%{?with_wb:--enable-wideband}
 
