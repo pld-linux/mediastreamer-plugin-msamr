@@ -12,16 +12,17 @@ Group:		Libraries
 Source0:	http://linphone.org/releases/sources/plugins/msamr/msamr-%{version}.tar.gz
 # Source0-md5:	10c6a05e12c2af17f4ebc215d6c477da
 URL:		https://github.com/Distrotech/msamr
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	ortp-devel >= 0.16.0
-BuildRequires:	mediastreamer-devel >= 2.0.0
+BuildRequires:	mediastreamer-devel >= 2.13.0
 BuildRequires:	opencore-amr-devel >= 0.1.2
 BuildRequires:	pkgconfig
 %{?with_wb:BuildRequires:	vo-amrwbenc-devel >= 0.1.1}
-Requires:	mediastreamer >= 2.0.0
+Requires:	mediastreamer >= 2.13.0
 Requires:	opencore-amr >= 0.1.2
+Requires:	ortp >= 0.16.0
 %{?with_wb:Requires:	vo-amrwbenc >= 0.1.1}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -37,7 +38,7 @@ Ten pakiet udostępnia wtyczkę mediastreamera do kodeka dźwięku AMR.
 
 %build
 %{__libtoolize}
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__autoheader}
 %{__automake}
