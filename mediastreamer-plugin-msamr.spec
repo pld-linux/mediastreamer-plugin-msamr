@@ -9,9 +9,11 @@ Version:	1.1.3
 Release:	2
 License:	GPL v2+
 Group:		Libraries
-Source0:	http://linphone.org/releases/sources/plugins/msamr/msamr-%{version}.tar.gz
+#Source0Download: https://gitlab.linphone.org/BC/public/msamr/-/tags
+#Source0:	https://gitlab.linphone.org/BC/public/msamr/-/archive/%{version}/msamr-%{version}.tar.bz2
+Source0:	http://linphone.org/releases/old/sources/plugins/msamr/msamr-%{version}.tar.gz
 # Source0-md5:	10c6a05e12c2af17f4ebc215d6c477da
-URL:		https://github.com/Distrotech/msamr
+URL:		https://gitlab.linphone.org/BC/public/msamr
 BuildRequires:	autoconf >= 2.63
 BuildRequires:	automake
 BuildRequires:	libtool >= 2:2
